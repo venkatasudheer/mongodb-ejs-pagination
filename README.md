@@ -1,4 +1,4 @@
-# Mongodb-ejs
+# Mongodb-ejs-pagination
 
 > How to connect with mongodb,express using nodejs and display json by ejs.
 
