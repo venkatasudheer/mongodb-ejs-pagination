@@ -105,7 +105,7 @@ count all items in collection with count() (we will use this value to calculate 
 Product.count().exec(function(err, count) {
     ...
 ```
-then render main/products page and send necessary data:
+then render index.js page and send necessary data:
 ``` bash
 res.render('main/products', {
     products: products,
