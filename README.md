@@ -11,16 +11,10 @@ MongoDB - https://www.mongodb.com/download-center?jmp=nav#community
 Get started by creating a new folder for this project, and name it anything you like. Then, inside that folder, create additional folders and files to match the following structure:
 
 ``` bash
-├── routes
-|    └── main.js
-├── models
-|    └── product.js
-├── views
-|    ├── main
-|    |    ├── products.ejs
-|    |    └── add-product.ejs
-|    └── index.ejs
-└── server.js
+|   
+├── views   
+|    └── products.ejs
+└── index.js
 ```
 and install necessary dependencies to work:
 
@@ -40,7 +34,7 @@ var mongoose = require('mongoose')
 var bodyParser = require('body-parser')
 var app = express()
 
-#Model declaration
+# Model declaration
 
 var Product = mongoose.model('product',{
     category: String,
@@ -51,7 +45,6 @@ var Product = mongoose.model('product',{
 
 # Connecting to mongodb server
 mongoose.connect('mongodb://localhost:27017/article', {useNewUrlParser: true})
-
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({
     extended: true
@@ -230,4 +223,4 @@ to append ... to show that we have links ahead.
     <li><a href="/page/<%= pages %>">Last</a></li>
 <% } %>
 ```
-Now you can run MongoDB with mongod command, node server.js command, go to http://localhost:8080/generate-fake-data to insert data to MongoDB and use pagination on http://localhost:8080/products/1 page.
+Now you can run MongoDB with mongod command or through Mongodb compass community, node index.js command,and  use pagination on http://localhost:8000/1 page.
